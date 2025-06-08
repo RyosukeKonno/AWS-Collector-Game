@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #232f3e;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #232f3e;
+    margin: 20px 0;
+}
+
+.game-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.primary {
+    background-color: #ff9900;
+    color: white;
+}
+
+.primary:hover:not(:disabled) {
+    background-color: #e88a00;
+}
+
+.secondary {
+    background-color: #232f3e;
+    color: white;
+}
+
+.secondary:hover:not(:disabled) {
+    background-color: #1a2433;
+}
+
+.card-display {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.aws-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
+    overflow: hidden;
+    border: 2px solid #ff9900;
+}
+
+.card-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-description {
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.collection-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.collection-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.collection-item:hover {
+    transform: translateY(-5px);
+}
+
+.collection-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    overflow: hidden;
+    border: 1px solid #ff9900;
+}
+
+.collection-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.collection-name {
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.not-collected {
+    background-color: #eaeaea;
+    opacity: 0.5;
+}
+
+.not-collected .collection-icon {
+    background-color: #ddd;
+    border: 1px solid #999;
+}
+
+/* 進捗バー */
+.progress-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #ff9900;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .collection-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+    
+    .collection-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .collection-name {
+        font-size: 10px;
+    }
+}

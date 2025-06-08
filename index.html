@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS図鑑コレクター</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AWS図鑑コレクター</h1>
+        
+        <div class="game-section">
+            <div class="stats">
+                <p>クリック数: <span id="click-count">0</span>/50</p>
+                <p>コイン: <span id="coin-count">0</span></p>
+            </div>
+            
+            <div class="actions">
+                <button id="click-button" class="btn primary">クリック！</button>
+                <button id="gacha-button" class="btn secondary" disabled>AWSガチャを引く (10コイン)</button>
+            </div>
+        </div>
+        
+        <div id="card-display" class="card-display hidden">
+            <div class="aws-card">
+                <h3 id="card-title">サービス名</h3>
+                <div id="card-icon" class="card-icon">
+                    <img src="" alt="AWS Service Icon" id="card-icon-img">
+                </div>
+                <p id="card-description">サービスの説明がここに表示されます。</p>
+                <button id="collect-button" class="btn primary">コレクションに追加</button>
+            </div>
+        </div>
+        
+        <div class="collection-section">
+            <h2>あなたのAWS図鑑 (<span id="collection-count">0</span>/<span id="total-services">0</span>)</h2>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar" style="width: 0%">0%</div>
+            </div>
+            <div id="collection" class="collection-grid">
+                <!-- コレクションアイテムがここに追加されます -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
